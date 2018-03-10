@@ -1,0 +1,729 @@
+html {
+    overflow-x: hidden;
+}
+body {
+    height: auto;
+    width: 100%;
+}
+ /* background on banner on top */
+.bg {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    right: 0px;
+    top: 0px;
+    z-index: -101;
+    width: auto;
+    height: 775px;
+}
+ 
+/* foreground of banner with image on it */
+.fg {
+    height: 775px;
+    right: 0px;
+    top: 0px;
+    position: absolute;
+    z-index: -99;
+    opacity: 0.6;
+    min-height: 100%;
+    min-width: 100%;
+    width: auto;
+}
+/* video om background */
+#video {
+    height: auto;
+    right: 0px;
+    width: 100%;
+    bottom: 0;
+    z-index: -100;
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+/* font on the banner */
+
+@font-face {
+    font-family: "Teko";
+    font-style: normal;
+    font-weight: 700;
+    src: local("Teko Bold"), local("Teko-Bold"), url("https://fonts.gstatic.com/s/teko/v7/vZNHrtAXYeQN4tfAPqsxxw.woff2") format("woff2");
+    unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+/* nav bar on top */
+
+#nav {
+    display: inherit;
+    animation: fadein 2s linear 1;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+/* term button on nav bar */
+.term {
+    position: absolute;
+    z-index: 150;
+    position: relative;
+    left: -190px;
+    top: 10px;
+}
+#menu {
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+/* upward down arrow image with term */
+
+img.arrow {
+    position: relative;
+    left: 10px;
+    top: 3px;
+    border-left: 5px;
+}
+
+/* term toggle list */
+.navList,
+.term {
+    font-family: sans-serif;
+    position: relative;
+    display: inline;
+    list-style: none;
+    color: white;
+    float: right;
+    right: -80px;
+    transform: translateX(-30px);
+}
+
+/* list on toggle */
+#menu {
+    background: transparent;
+    border: 0;
+    color: white;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+#toggleMenu {
+    text-align: justify;
+    font-family: sans-serif;
+    position: absolute;
+    z-index: 200;
+    width: 15%;
+    top: 85px;
+    right: 100px;
+    height: auto;
+    font-size: 12px;
+    margin: 0 auto;
+    color: slategrey;
+    background: white;
+    position: absolute;
+    display: none;
+}
+
+#toggleMenu li {
+    font-weight: 400;
+    text-indent: 50px;
+    list-style-type: none;
+    margin: 0 auto;
+    text-align: inherit;
+    padding-top: 18px;
+    padding-left: 0px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+
+}
+
+#toggleMenu li:hover {
+    display: block;
+    background-color: lightgray;
+}
+
+/* button on nav bar */
+
+button.role1 {
+    font-family: sans-serif;
+    top: 10px;
+    line-height: 20px;
+    width: 140px;
+    border-radius: 20px;
+    font-size: 15px;
+    padding: 10px;
+    border: none;
+    float: right;
+    background: red;
+    color: white;
+}
+
+.role1:focus,
+.role1:active,
+.role1:hover {
+    background-color: firebrick;
+    border-radius: 20px;
+}
+
+/* texts on banner */
+
+.head-para {
+    color: white;
+    text-align: center;
+    transform: rotateZ(-4deg);
+}
+
+span {
+    font-family: "teko";
+
+    color: white;
+    position: relative;
+    left: 10px;
+}
+
+.first {
+    font-style: italic;
+    font-size: 270px;
+    top: -50px;
+    position: relative;
+    z-index: 1;
+    text-shadow: -6px 0px 18px black;
+}
+
+.second {
+    font-style: italic;
+    font-size: 270px;
+    position: relative;
+    z-index: -1;
+    top: -285px;
+    text-shadow: -6px 0px 25px black;
+    z-index: 1;
+   }
+
+.third {
+    font-style: italic;
+    font-family: sans-serif;
+    text-shadow: -6px 0px 25px black;
+    top: -400px;
+    position: relative;
+    font-weight: 0;
+    font-size: 24px;
+}
+
+/* button that is continously moving */
+#rotate {
+    position: absolute;
+    width: 4%;
+    height: 30px;
+    bottom: 30%;
+    right: 700px;
+    color: white;
+    border: 3px solid white;
+    border-radius: 50px;
+    background: transparent;
+    transform: rotate(93deg);
+}
+
+/* animation while hover on that moving button */
+#pts {
+    font-family: "teko";
+    font-style: italic;
+    box-sizing: border-box;
+    width: 40%;
+    color: white;
+    background: transparent;
+    position: absolute;
+    z-index: 105;
+    top: 85%;
+    opacity: 0;
+}
+
+.pts {
+    animation: slide 2s linear 1;
+}
+
+@keyframes slide {
+    to {
+        opacity: 1;
+        margin-left: 150px;
+    }
+}
+/* the oval shaped inside a capsule like button */
+img.icon {
+    padding-top: 18px;
+    filter: drop-shadow(1px 1px 10px white);
+    animation: transform 1s linear 2s infinite, opacity 1s linear 2s infinite;
+    transform: rotate(90deg) translateX(-6px);
+    margin-left: -19px;
+    filter: drop-shadow(0px 0px 5px 5px white);
+}
+
+@keyframes transform {
+    from {
+        margin-left: -20px;
+    }
+    to {
+        margin-left: 30px;
+    }
+}
+
+@keyframes opacity {
+    from {
+        opacity: 1.0;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* section right side paragraph */
+
+#para {
+    padding-right: 30px;
+    margin-top: -30px;
+    float: right;
+    width: 40%;
+    height: auto;
+}
+/* section start from here */
+/* background of section */
+.sec-bg {
+    position: absolute;
+    z-index: -105;
+    min-height: 100%;
+    min-width: 100%;
+    
+    width: 20%;
+    top: 780px;
+
+}
+
+.sec-para {
+    margin-top: -40px;
+    font-family: sans-serif;
+    font-style: bold;
+    text-align: left;
+    font-size: 18px;
+    font-weight: normal;
+    color: #334455;
+    word-wrap: normal;
+    line-height: 32px;
+}
+
+.sec-heading {
+
+    text-align: left;
+    line-height: 8px;
+    font-size: 85px;
+    font-style: italic;
+    font-family: "teko";
+    color: #334455;
+}
+
+/* video image aside with para */
+#sec-video {
+    padding-left: 20px;
+    float: left;
+}
+
+/* role button  right after the section's para */
+.role2 {
+    position: relative;
+    right: 400px;
+    top: 30px;
+    line-height: 20px;
+    width: 160px;
+    font-size: 17px;
+    padding: 12px;
+    border: none;
+    float: right;
+    background: red;
+    color: white;
+}
+
+.role2:focus,
+.role2:active,
+.role2:hover {
+    background-color: dodgerblue;
+}
+
+#profession {
+    left: 0;
+    right: 0;
+    top: 200%;
+    position: absolute;
+    height: 650%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-color: #f5f6fb;
+    
+}
+  
+#pro-h1{
+    left: 37%;
+    margin-top: 30px;
+    margin-left: -400px;
+    position: absolute;
+    z-index: 5;
+    font-family: "teko";
+    font-style: italic;
+    line-height: normal;
+    font-size: 70px;
+    color: #334455;
+    opacity: 0;
+}
+
+#pro-p {
+    left: 25%;
+    margin-top: 90px;
+    margin-left: 300px;
+    position: absolute;
+    z-index: 5;
+    text-align: center;
+    font-family: sans-serif;
+    line-height: normal;
+    color: #334455;
+    font-size: 22px;
+    display: block;
+    opacity: 0;
+}
+
+
+#pro-list-images {
+    height: auto;
+    width: 100%;
+}
+.row-1 {
+    list-style: none;
+    left: 120px;
+    right: 0;
+    position: absolute;
+    top: 260px;
+}
+.row-2 {
+    list-style: none;
+    left: 120px;
+    right: 0;
+    position: absolute;
+    top: 700px;
+}
+.pro1,.pro2,.pro3,.pro4,.pro5,.pro6,.pro7,.pro8 {
+    border-radius: 10px;
+    padding-left: 35px;
+    filter: drop-shadow(0px 15px 10px #334455);
+    height: 340px;    
+}
+#pro-list-images img:hover {
+    filter: drop-shadow(0px 0px 20px #334455);
+    height: 330px;
+    padding-left: 42px;
+}
+#pro-p2 {
+    left: 45%;
+    top: 1050px;
+    margin-top: 90px;
+    position: absolute;
+    z-index: 5;
+    text-align: center;
+    font-family: sans-serif;
+    line-height: normal;
+    color: #334455;
+    font-size: 22px;
+}
+.contact {
+    position: relative;
+    right: 580px;
+    top: 1060px;
+    line-height: 20px;
+    width: 180px;
+    font-size: 17px;
+    padding: 14px;
+    border: none;
+    float: right;
+    background: red;
+    color: white;
+}
+.contact:hover {
+    background-color: dodgerblue;
+}
+
+#upcoming {
+    left: 0;
+    right: 0;
+    top: 380%;
+    position: absolute;
+    height: 160%;
+    width: 100%;
+    background: url('2018-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    
+}
+#upcoming-h1 {
+    font-family: "teko";
+    font-style: italic;
+    line-height: normal;
+    font-size: 85px;
+    color: white;
+    opacity: 0;
+    margin-left: -400px;
+}
+#slider {
+   
+    width: 2830px;
+    height: auto;
+    transition:all 500ms ease;
+}
+#li {
+    
+    margin-left: -35px;
+    transition:all 500ms ease;
+}
+#li li{
+ 
+    display: inline;
+    max-width: 100%;
+    float: left;
+    list-style: none;
+}
+#li img{
+       	margin-left:1em;
+	margin-right:1em;
+    height: 80%;
+    width: 250px;
+    margin-top: 120px;
+    border-radius: 10px;
+    transition: all 200ms ease;
+}
+#li img:hover{
+    
+transform: translateY(-20px);
+}
+#slide-arrow img {
+     height:50px;
+    width: 50px;
+}
+#prev , #next{
+    border: none;
+    position: absolute;
+    z-index: 99;
+    background: transparent;
+    border-radius: 50%;
+    left: 10px;
+    
+}
+#prev {
+    
+    left: 20px;
+}
+#next {
+    left: 160px;
+}
+
+#current-openings {
+      left: 0;
+    right: 0;
+    top: 500%;
+    position: absolute;
+}
+#current-openings-h1 {
+      left: 30%;
+    margin-top: 30px;
+    position: absolute;
+    z-index: 5;
+    font-family: "teko";
+    font-style: italic;
+    line-height: normal;
+    font-size: 70px;
+    color: #334455;
+    display: block;
+    opacity: 0;
+    margin-left: -200px;
+    
+}
+#current-openings-p {
+     left: 28%;
+    margin-top: 125px;
+    position: absolute;
+    z-index: 5;
+    text-align: center;
+    font-family: sans-serif;
+    line-height: normal;
+    color: #334455;
+    font-size: 22px;
+    display: block;
+    opacity: 0;
+    margin-left: 200px;
+}
+div #co-list {
+    left: 10px;
+    width: 98%;
+    position: relative;
+    top:200px;
+    filter: drop-shadow(0px 10px 55px #d1d5da);
+}
+#list-1,#list-2,#list-3,#list-4,#list-5,#list-6,#list-7,#list-8,#list-9,#list-10,#list-11,#list-12,#list-13,#list-14 {
+    margin-top: 3px; 
+    padding: 55px;
+    background: white;
+    padding-left: 20px;
+}
+#list-1 img,#list-2 img,#list-3 img,#list-4 img,#list-5 img,#list-6 img,#list-7 img,#list-8 img,#list-9 img,#list-10 img,#list-11 img,#list-12 img,#list-13 img,#list-14 img {
+    float: right;
+    margin-top: -25px; 
+ }
+
+#list-1:hover,#list-2:hover,#list-3:hover,#list-4:hover,#list-5:hover,#list-6:hover,#list-7:hover,#list-8:hover,#list-9:hover,#list-10:hover,#list-11:hover,#list-12:hover,#list-13:hover,#list-14:hover {
+    background-color: #f7f7fb;
+}
+.rotation {
+    animation: rotate 1s 0.25s 1;
+    transform: rotateZ(360deg);
+}
+.rotation::after {
+    content:url("plus.png"); 
+}
+@keyframes rotate {
+    to {transform: rotateZ(180deg);}
+}
+
+#list-h1 {
+    
+    font-weight: 100;
+    font-family: sans-serif;
+    line-height: normal;
+    color: #334450;
+    font-size: 20px;
+    
+    
+}
+.list-p {
+    clear:right;
+    margin-top: 3px; 
+    padding: 50px;
+    background: white;
+    padding-left: 20px;
+    font-family: sans-serif;
+    font-style: bold;
+    text-align: right;
+    font-size: 18px;
+    font-weight: normal;
+    color: #334455;
+    word-wrap: break-word;
+    line-height: 32px;
+    display: none;
+}
+#go {
+
+    line-height: 20px;
+    right: 580px;
+   
+    font-size: 17px;
+    padding: 14px;
+    border: none;
+    float: right;
+    background: red;
+    color: white;
+}
+#go:hover {
+    background-color: dodgerblue;
+}
+.current-openings-p {
+    
+    left: 42%;
+    margin-top: 60px;
+    position: absolute;
+    z-index: 5;
+    text-align: center;
+    font-family: sans-serif;
+    line-height: normal;
+    color: #334455;
+    font-size: 22px;
+}
+.co-contact {
+    position: absolute;
+    left: 45%;
+    bottom: -8%;
+    line-height: 20px;
+    width: 160px;
+    font-size: 17px;
+    padding: 12px;
+    background: red;
+    color: white;
+    border: none;
+}
+.co-contact:hover {
+    background: dodgerblue;
+}
+footer {
+    width: 100%;
+    height: 75%;
+    background: url(2018-bg.jpg) no-repeat;
+    background-size: 100% auto;
+    position: absolute;
+    top: 830%;
+    bottom: -20%;
+    right: 0;
+    
+}
+#footer-h1 {
+    top: 30%;
+    margin-left: -200px;
+    left: 30%;
+    bottom: 0;
+     font-family: "teko";
+    font-style: italic;
+    line-height: normal;
+    font-size: 90px;
+    color: white;
+    opacity: 0; 
+}
+#footer-p {
+    margin-left: 200px;
+       left: 27%;
+    margin-top: 190px;
+    position: absolute;
+    z-index: 5;
+    text-align: center;
+    font-family: sans-serif;
+    line-height: normal;
+    color: white;
+    font-size: 25px;
+    display: block;
+    opacity: 0; 
+}
+    
+footer li {
+    position: relative;
+    display: inline;
+    bottom: -260px;
+    left: 36%;
+    padding: 10px;
+}
+#icons {
+    
+   margin-top: 110px ;
+    opacity: 0;
+}
+
+.fb-icon :hover,.insta-icon :hover,.in-icon :hover,.twitter-icon :hover {
+    height: 5%;
+    width: 5%;
+    margin-left: -14px;
+    margin-top:-15px;
+}
+.footer-copy {
+    font-family: sans-serif;
+    color: #4b4d4f;
+    float: right;
+    margin-top: 30%;
+    margin-right: 2%;
+    font-size: 12px;
+}

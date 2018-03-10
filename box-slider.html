@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>google style card slider</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+
+/* ===== FONTS ===== */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+
+/*Global*/
+*{
+	box-sizing: border-box;
+}
+
+body{
+	margin:0;
+	padding:0;
+}
+
+h1{
+	text-align: center;
+	text-transform: capitalize;
+	font-size: 4em!important;
+	font-family: 'lato',sans-serif,arial,Helvetica!important;
+	font-weight: bold!important;
+	letter-spacing: 0;
+	margin-bottom:0.5em!important;
+}
+.heading-color{
+	color:#1080f2;
+}
+h3{
+	font-family: 'raleway',sans-serif,arial,Helvetica!important;
+	text-transform: capitalize;
+	font-size:2em!important;
+	font-weight: bold!important;
+	margin-bottom: 0.8em!important;
+	color:#292929!important;
+}
+
+p{
+	font-family: 'open sans',sans-serif,arial,Helvetica!important;
+	color:#222;
+	font-size:16px;
+	line-height: 1.5em;
+	color:#4b555f!important;
+}
+
+/* ===== youtube section / tutorial section =====*/
+
+.youtube{
+	position:relative;
+	width:100%;
+	height:600px;
+	padding-top:3em;
+	overflow: hidden;
+	/*background:#f8f8f8;*/
+}
+
+.slider--nav{
+	position: absolute;
+	width:100%;
+	height: auto;
+	top:50%;
+}
+
+.slider--nav button{
+	position: absolute;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 7px 15px rgba(0,0,0,.2);
+    border: none;
+    color: #757575;
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 99;
+    transition: 0.5s;
+    opacity: 0.7;
+    outline: none;
+}
+
+.slider--nav button:hover{
+	opacity: 1;
+	color:#000;
+}
+
+.slider--nav #prev{
+	left:1em;
+}
+
+.slider--nav #next{
+	right:1em;
+}
+
+
+.slider--container{
+	position: relative;
+	width:2830px;
+	height:380px;
+	padding:1em;
+	transition:all 500ms ease;
+}
+
+.slider--box{
+	position: relative;
+	width:250px;
+	height:350px;
+	margin-left:1em;
+	margin-right:1em;
+	float:left;
+	border:1px solid #dbe7ef;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0px 30px 80px 0 rgba(20,52,92,0.2);
+	transition:all 100ms ease;
+}
+
+
+@media only screen and (max-width:991px){
+	.slider--box{
+		width:200px;
+		height:350px;
+	}
+	.slider--container{
+		width:2350px;
+	}
+	.youtube{
+		overflow:hidden;
+	}
+}
+
+.slider--box:hover{
+	transform:translateY(-5px);
+	box-shadow: 0px 40px 100px 0 rgba(20,52,92,0.3);
+}
+
+.box--title , .box--body{
+	position: absolute;
+	border-radius: inherit;
+	width:100%;
+	left:0;
+}
+
+.box--title{
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	height: 60%;
+	top:0;
+	background: url("https://images.pexels.com/photos/295821/pexels-photo-295821.jpeg?w=940&h=650&auto=compress&cs=tinysrgb");
+	background-size: cover;
+	background-position: center;
+}
+
+.box--body{
+	top:60%;
+	height:40%;
+	padding:0.8em 1.2em 0.5em 1.2em;
+}
+
+.box--body p{
+	position: relative;
+	margin-top:-1em;
+}
+
+.box--body h3{
+	font-size:24px!important;
+}
+
+</style>
+</head>
+<body>
+	
+<!-- new from youtube / video tutorials -->
+
+<section class="youtube">
+	<h1>latest <span class="heading-color">videos</span></h1>
+
+	<div class="slider--nav">
+		<button id="prev" type="button" onclick="moveSlider(event)"><i class="fa fa-chevron-left"></i></button>
+		<button id="next" type="buton" onclick="moveSlider(event)"><i class="fa fa-chevron-right"></i></button>
+	</div>
+
+	<div class="slider--container" id="box--slider">
+		
+		<a href="javascript:void(0)">
+			<div class="slider--box">
+				<div class="box--title"></div>
+				<div class="box--body">
+					<h3>google map API</h3>
+					<p>JavaScript Tutorial</p>
+				</div>
+			</div>
+		</a>
+
+		<a href="javascript:void(0)">
+			<div class="slider--box">
+				<div class="box--title"></div>
+				<div class="box--body">
+					<h3>fibonacci series</h3>
+					<p>Java Tutorial</p>
+				</div>
+			</div>
+		</a>
+
+		<a href="javascript:void(0)">
+			<div class="slider--box">
+				<div class="box--title"></div>
+				<div class="box--body">
+					<h3>prime series</h3>
+					<p>Java Tutorial</p>
+				</div>
+			</div>
+		</a>
+
+		<a href="javascript:void(0)">
+			<div class="slider--box">
+				<div class="box--title"></div>
+				<div class="box--body">
+					<h3>copy to clipboard</h3>
+					<p>JavaScript Tutorial</p>
+				</div>
+			</div>
+		</a>
+
+		<a href="javascript:void(0)">
+			<div class="slider--box">
+				<div class="box--title"></div>
+				<div class="box--body">
+					<h3>new year's wish</h3>
+					<p>JavaScript Tutorial</p>
+				</div>
+			</div>
+		</a>
+
+		<a href="javascript:void(0)">
+			<div class="slider--box">
+				<div class="box--title"></div>
+				<div class="box--body">
+					<h3>keyCode program</h3>
+					<p>JavaScript Tutorial</p>
+				</div>
+			</div>
+		</a>
+
+		<a href="javascript:void(0)">
+			<div class="slider--box">
+				<div class="box--title"></div>
+				<div class="box--body">
+					<h3>animated mouse wheel</h3>
+					<p>CSS Tutorial</p>
+				</div>
+			</div>
+		</a>
+
+		<a href="javascript:void(0)">
+			<div class="slider--box">
+				<div class="box--title"></div>
+				<div class="box--body">
+					<h3>heart shape</h3>
+					<p>CSS Tutorial</p>
+				</div>
+			</div>
+		</a>
+
+		<a href="javascript:void(0)">
+			<div class="slider--box">
+				<div class="box--title"></div>
+				<div class="box--body">
+					<h3>hamburger shape</h3>
+					<p>CSS Tutorial</p>
+				</div>
+			</div>
+		</a>
+
+		<a href="javascript:void(0)">
+			<div class="slider--box">
+				<div class="box--title"></div>
+				<div class="box--body">
+					<h3>animated clock</h3>
+					<p>CSS Tutorial</p>
+				</div>
+			</div>
+		</a>
+
+
+	</div>
+</section>
+
+<script>
+
+/*===== youtube slider / slider for featuring videos =====*/
+
+var nextButton = document.getElementById("next");
+var prevButton = document.getElementById("prev");
+var boxSliderContainer = document.getElementById("box--slider");
+var initialTranslate = 0;
+var slidingRatio = window.innerWidth/2;
+var iw = window.innerWidth/2;
+var bw = boxSliderContainer.offsetWidth;
+var rate = bw - iw;
+
+function moveSlider(event){
+	
+	if(event.currentTarget == nextButton){
+
+		initialTranslate-=slidingRatio;
+		if( -rate < initialTranslate){
+			boxSliderContainer.style.transform="translateX("+initialTranslate+"px)";
+		}
+		else{
+			initialTranslate = 0;
+			boxSliderContainer.style.transform="translateX("+initialTranslate+"px)";
+		}
+	
+		
+	}
+
+	else if(event.currentTarget == prevButton){
+
+		initialTranslate+=slidingRatio;		
+		if(initialTranslate >= slidingRatio ){
+			initialTranslate = -(rate - slidingRatio);
+		}
+
+		boxSliderContainer.style.transform="translateX("+initialTranslate+"px)";	
+
+	}
+}
+
+</script>
+
+
+
+</body>
+</html>

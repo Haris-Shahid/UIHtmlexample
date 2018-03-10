@@ -1,0 +1,308 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title> Remindermedia Careers </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="javascript.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
+</head>
+
+<body>
+   
+    <div id="body" >
+   <div class="container" >
+    <!-- header starts -->
+    <header>
+         
+        <div class="col-sm-6 col-md-4 col-lg-2">
+        <!-- video header -->
+        <video muted loop autoplay id="video">
+       <source src="http://careers.remindermedia.com/wp-content/themes/careers-remindermedia/assets/videos/careers-bg-video.mp4" type="video/mp4">
+   </video>
+        <!-- foreground image -->
+        <img src="fg.jpg" class="fg">
+        <!-- background image -->
+        <img src="Background.jpg" class="bg">
+        <br/>
+        </div>
+        
+        <!-- nav bar -->
+        <nav id="nav" class="navbar">
+
+            <!-- logo of web -->
+            <img src="logo.gif" alt='' height="55px" width="18%" float="left" id="logo" />
+            <!-- term dropdown -->
+            <li class="term"><button id="menu" onmouseover="slideDown()"> Terms <img class="arrow" src='arrow.png' height="17px" width="17px"> </button> </li>
+            <div id="toggleMenu" class="toggleClass">
+                <li> Inside Sales </li>
+                <li> Marketing Services </li>
+                <li> National Sales </li>
+                <li> Creative &amp; Markiting</li>
+                <li> IT &amp; Software </li>
+                <li> Human Resources </li>
+                <li> Internship Program </li>
+            </div>
+            <li class="navList"> <button class="role1">Find A Role</button></li>
+
+
+        </nav>
+        <!-- sentence on header -->
+     
+<div class="col-sm-6 col-md-4 col-lg-2">
+        <p class="head-para">
+            <span class="first"> WE WANT </span>
+            <br/>
+            <span class="second">THE BEST</span>
+            <br/>
+            <span class="third"> Join a team that enables you to grow, earn, and succeed at an unlimited pace.</span>
+            <br/>
+            <!-- button that is moving -->
+            <button id="rotate" onclick="move()" onmouseover="changeIn()" onmouseout="changeOut()"> <img src="icon.gif" class="icon" width="18px" height="18px" ></button>
+
+        </p>
+        <div id="pts">
+            <h1>Press Here To Slide Down</h1>
+        </div>
+            </div>
+        
+    </header>
+    
+        <div class="col-sm-6 col-md-4 col-lg-2">
+    <img src="bg.jpg" class="sec-bg">
+
+    <section id="intro">
+        <a href="#"><img src="video-thumb-1.jpg" id="sec-video" ></a>
+        <div id="para">
+            <h1 class="sec-heading"> BIG THINGS ARE </h1>
+            <h1 class="sec-heading"> HAPPENING </h1>
+            <p class="sec-para">
+                There has never been a better time to join the ReminderMedia team. Business is booming, and we want to build on our awesome foundation with more talented professionals looking to have fun and make real money. We understand that employees reach their full potential when they're happy, and we've built an environment in King of Prussia where fulfilling careers can thrive.
+            </p>
+
+            <button class="role2">Find A Role</button>
+        </div>
+    </section>
+         </div>
+   
+    <br/>
+    <br/><br/><br/>
+        <div class="col-sm-6 col-md-4 col-lg-2">
+    <div id="profession">
+        <br/><br/><br/>
+        <p>
+            <span id="pro-h1"> FIND YOUR ROLE </span> <br/><br/>
+            <span id="pro-p"> We are a diverse team where every personality type can find their dream job. </span></p>
+        <div id="pro-list-images">
+            
+            <li class="row-1"> 
+             
+              <a><img class='pro1' src="pro1.jpg"></a>
+            
+              <a><img src="pro2.jpg" class='pro2'></a> 
+              
+              <a><img src="pro3.jpg" class='pro3'></a>
+              
+              <a><img src="pro4.jpg" class='pro4'></a> 
+            
+        </li>
+         <li class="row-2"> 
+             
+              <a><img class='pro5' src="pro5.jpg"></a>
+            
+              <a><img src="pro6.jpg" class='pro6'></a> 
+              
+              <a><img src="pro7.jpg" class='pro7'></a>
+              
+              <a><img src="pro8.jpg" class='pro8'></a> 
+            
+        </li>
+
+    </div>
+      <span id="pro-p2"> Don't see a role for you ? </span>
+      <button class="contact" >Contact Us Today</button>
+    </div>
+         </div>
+        <div class="col-sm-6 col-md-4 col-lg-2">
+    <div id='upcoming' >
+       <br/> <br/> 
+        <span id='upcoming-h1'> UPCOMING EVENTS </span>
+        <div id="slide-arrow" >
+        <button id="prev" type="button" onclick="moveSlider(event)"><img src="slide-arrow.png">
+            </button>
+		<button id="next" type="button" onclick="moveSlider(event)"><img src="slide-arrow2.png">
+            </button>
+        </div>
+<div id="slider">
+    <ul id="li" >
+    <li>
+    <a href="#">
+        <img src="slide1.png">
+        
+        </a>
+    </li>           
+        <li>
+    <a href="#">
+        <img src="slider2.png">
+        
+        </a>
+    </li>           
+    <li>
+    <a href="#">
+        <img src="slider3.png">
+        
+        </a>
+    </li>           
+        <li>
+    <a href="#">
+        <img src="slider4.png">
+        
+        </a>
+    </li>           
+        <li>
+    <a href="#">
+        <img src="slider5.png">
+        
+        </a>
+    </li>           
+        <li>
+    <a href="#">
+        <img src="slider6.png">
+        
+        </a>
+    </li>           
+        <li>
+    <a href="#">
+        <img src="slider7.png">
+        
+        </a>
+    </li>           
+        <li>
+    <a href="#">
+        <img src="slider8.png">
+        
+        </a>
+    </li>           
+        <li>
+    <a href="#">
+        <img src="slider9.png">
+        
+        </a>
+    </li>           
+<li>
+    <a href="#">
+        <img src="sliderX.png">
+        
+        </a>
+    </li>           
+        
+
+    
+    </ul>
+   </div>    
+        
+    
+    
+        </div>
+        
+         </div>
+     <br/>
+        <div class="col-sm-6 col-md-4 col-lg-2">
+    <div id="current-openings">
+    <span id="current-openings-h1"> CURRENT OPENINGS</span>
+        <span id="current-openings-p">We are growing fast, and would love to have you on our team!</span>
+        <div id="co-list" >
+               <div id="list-1" >
+            <div id="list-h1"> Direct Sales Internship </div><img class="plus" src="plus.png" height="2%" width="2%" ></div>
+            <div class="list-p" > <span>In this role, you will assist the Sales Team with functions including, calling prospective clients and introducing them to our marking program, utilizing CRM to identify sales leverage &amp; learning all components of the sales process. You will be working with the best, so if you’re looking to learn about all about sales, this is the place for it </span><button id="go"> GO </button>
+        </div>
+              <div id="list-2" >
+            <div id="list-h1"> Outside Sales Presenter </div><img class="plus" src="plus.png" height="2%" width="2%" ></div>
+            <div class="list-p"> Our outside sales team represents ReminderMedia across the country. Whether they’re situated on the East Coast or West Coast, they’re passionate about our vision and possess a strong drive to close deals. If you have a flair for public speaking and local travel, consider joining our team today! <button id="go"> GO </button>
+        </div>
+            <div id="list-3" >
+            <div id="list-h1"> Sales Suppport Internship </div><img class="plus" src="plus.png" height="2%" width="2%" ></div>
+            <div class="list-p"> Looking to learn the basics of business? The Sales Support Internship is our largest internship opportunity and is offered in the Spring, Summer, and Fall semester. In this role, you will assist the Sales Support Team in gathering sales data, cleaning existing data in our CRM, and identifying leverage for our Sales Team. All Majors are accepted. <button id="go"> GO </button>
+         </div>
+               <div id="list-4" >
+            <div id="list-h1"> Sales, Account Executive </div><img class="plus" src="plus.png" height="2%" width="2%" ></div>
+            <div class="list-p"> ReminderMedia is looking to add to our rowdy roster of money making fanatics ASAP. From the moment you walk in the door, your success will be determined solely on your work ethic and our amazing mentorship. It’s our philosophy that we all make more when we’re having fun, and the only thing we take seriously is closing deals, so if you want to clear real money and have a great time doing it, send us a resume today! <button id="go"> GO </button>
+         </div>
+               <div id="list-5" >
+            <div id="list-h1"> Software Developer </div><img class="plus" src="plus.png" height="2%" width="2%" ></div>
+            <div class="list-p"> This role will help to augment a new product development team. This team has the task of building several new applications for our next generation of services. Most day to day activities will be creating new code or supporting code that has been recently deployed. It's really about the platform, not the box. <button id="go"> GO </button>
+         </div>
+               <div id="list-6" >
+            <div id="list-h1"> Ad Production Artist/Graphic Designer </div><img class="plus" src="plus.png" height="2%" width="2%" ></div>
+            <div class="list-p"> ReminderMedia is growing fast and we need your help. We are looking for an experienced ad production artist with experience in traffic who is highly focused and detail oriented to assume responsibility for the creation and completion of advertising materials. We’re a fun—some may say quirky—group that likes to hang out together, but also work hard to achieve results together! This position is very fast-paced and requires a driven individual. We upload nearly one and a half files per minute. <button id="go"> GO </button>
+        </div>
+               <div id="list-7" >
+            <div id="list-h1"> Creative Sensitive Internship </div><img  class="plus" src="plus.png" height="2%" width="2%" ></div>
+            <div class="list-p"> Our Creative Department is always looking for talented interns to provide design skills and support for our content and marketing team. We look for interns that are interested in Marketing, Graphic Design, and Videography. Projects include creating web graphics for our website and creating blog posts, managing our social media, and reformatting and creating advertisements into templates for our clients. <button id="go"> GO </button>
+         </div>
+               <div id="list-8" >
+            <div id="list-h1"> Executive Assistant </div><img class="plus" src="plus.png" height="2%" width="2%" >
+            <div class="list-p"> The Executive Assistant will provide administrative and personal support for the CEO of ReminderMedia. This position will ensure the smooth coordination and completion of activities related to scheduling, correspondence, and events. Must have the ability to problem solve and break down issues into various detailed components. Must be a forward thinker who can anticipate the needs of the CEO. <button id="go"> GO </button>
+                   </div>
+         </div>
+               <div id="list-9" >
+            <div id="list-h1"> Customer Operations Internships </div><img class="plus" src="plus.png" height="2%" width="2%" ></div>
+            <div class="list-p"> Want to help our clients? In this role, you will assist the Customer Service Team by gathering customer data, processing customer requests in our CRM, &amp; learning all roles within the Customer Service team. The Customer Operations Internship is offered in the Spring, Summer, and Fall semester. All Majors are accepted. <button id="go"> GO </button>
+            </div>
+         
+                 <div id="list-10" >
+            <div id="list-h1"> Additional Internship Opportunities </div><img class="plus" src="plus.png" height="2%" width="2%" ></div>
+            <div class="list-p"> We frequently offer internships within our IT, Human Resources, and Accounting departments. Please email us at Internships@remindermedia.com or contact our Recruiting department at 484-804-2124 to find out about openings withing these departments. <button id="go"> GO </button>
+            </div>
+         
+                 <div id="list-11" >
+            <div id="list-h1"> Marketing Services Respresentative </div><img class="plus" src="plus.png" height="2%" width="2%" ></div>
+            <div class="list-p"> You will be working with our newest clients by walking them through the process of customizing their own version of American Lifestyle. Since this is a phone based position, you must be comfortable being on the phone for the majority of your day, making outbound calls to valued clients. <button id="go"> GO </button>
+            </div>
+         
+                 <div id="list-12" >
+            <div id="list-h1"> Sales Appointment Setter </div><img class="plus" src="plus.png" height="2%" width="2%" ></div>
+            <div class="list-p"> As an Appointment Setter, you will generate new business by calling on decision makers nationwide to schedule sales presentations for our Outside Sales team. <button id="go"> GO </button>
+            </div>
+         
+                 <div id="list-13" >
+            <div id="list-h1"> Senior System Administrator </div><img class="plus" src="plus.png" height="2%" width="2%" ></div>
+            <div class="list-p"> We are looking to hire a Senior System Administrator—in the King of Prussia area—to join our team of IT professionals. Our Senior System Administrator will provide technical support to all company systems through familiarity with standard IT concepts, practices, and procedures. We offer a strong compensation and benefits package to the right candidate. <button id="go"> GO </button>
+            </div>
+         
+                  <div id="list-14" >
+            <div id="list-h1"> Press Operator </div><img class="plus"  src="plus.png" height="2%" width="2%" ></div> 
+            <div class="list-p"> PRESS OPERATOR 2nd &amp; 3rd Shifts Due to the rapid and consistent growth we are looking to add to our team. We are currently seeking Press Operators and Press Assistants for our second and third shift print operations. <button id="go"> GO </button>
+            </div>
+        
+        <span class="current-openings-p" > Don't see a role for you? </span>
+        <button class="co-contact" > Contact Us Today </button>
+        </div>
+        </div>
+         </div>
+   <div class="col-sm-6 col-md-4 col-lg-2">
+    <footer>
+        <span id='footer-h1'> LET'S CONNECT </span> <br/>
+        <span id='footer-p' > Follow us on social media for updates on opportunities. </span>
+    <span class="footer-copy" float="right"> 2018 ReminderMedia Careers. </span>
+        <div id='icons' >
+        <li><a class="fb-icon"><img src='fb-icon.png' height="4%" width="4%"></a></li>
+        <li><a class="twitter-icon"><img src='twitter-icon.png' height="4%" width="4%"></a></li>
+        <li><a class="insta-icon"><img src='insta-icon.png' height="4%" width="4%"></a></li>
+        <li><a class="in-icon"><img src='in-icon.png' height="4%" width="4%"></a></li>
+        </div>
+             </footer>
+</div>
+       </div>
+    </div>
+        </body>
+    
+
+</html>

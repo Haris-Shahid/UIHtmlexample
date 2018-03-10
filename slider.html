@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>  
+  <html>
+  <head>
+          <link href="./style.css" rel="stylesheet">
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="javascript.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <style>
+          
+          body {
+              background: black;
+          }
+#upcoming-h1 {
+    font-family: sans-serif;
+    font-style: italic;
+    line-height: normal;
+    font-size: 85px;
+    color: white;
+}
+#slider {
+   
+    width: 2830px;
+    height: auto;
+    transition:all 500ms ease;
+}
+#li {
+    
+    margin-left: -35px;
+    transition:all 500ms ease;
+}
+#li li{
+ 
+    display: inline;
+    max-width: 100%;
+    float: left;
+    list-style: none;
+}
+#li img{
+       	margin-left:1em;
+	margin-right:1em;
+    height: 80%;
+    width: 250px;
+    margin-top: 120px;
+    border-radius: 10px;
+    transition: all 200ms ease;
+}
+#li img:hover{
+    
+transform: translateY(-20px);
+}
+#slide-arrow img {
+    
+     height:50px;
+    width: 50px;
+}
+#prev , #next{
+   
+    background: transparent;
+    border-radius: 50%;
+    left: 10px;
+    
+}
+#prev {
+    
+    left: 20px;
+}
+#next {
+    left: 160px;
+}
+
+      
+      
+      </style>
+      <script>
+          
+  
+          function moveSlider(event) {
+                     var nextButton = document.getElementById("next");
+var prevButton = document.getElementById("prev");
+var boxSliderContainer = document.getElementById("slider");
+var initialTranslate = 0;
+var slidingRatio = window.innerWidth/2;
+var iw = window.innerWidth/2;
+var bw = boxSliderContainer.offsetWidth;
+var rate = bw - iw;
+              
+              if(event.currentTarget == nextButton){
+             initialTranslate-=slidingRatio;
+		if( -rate < initialTranslate){
+			boxSliderContainer.style.transform="translateX("+initialTranslate+"px)";
+		}
+              document.getElementById("slider").style.transform="translateX("+offsetWidth+"px)";
+          }
+          }
+      </script>
+      
+  </head>
+  <body>
+  <div class="col-sm-6 col-md-4 col-lg-2">
+    <div id='upcoming' >
+       <br/> <br/> 
+        <span id='upcoming-h1'> UPCOMING EVENTS </span>
+        <div id="slide-arrow" >
+        <button id="prev" type="button" onclick="moveSlider(event)"><img src="slide-arrow.png">
+            </button>
+		<button id="next" type="button" onclick="moveSlider(event)"><img src="slide-arrow2.png">
+            </button>
+        </div>
+<div id="slider">
+    <ul id="li" >
+    <li>
+    <a href="#">
+        <img src="slide1.png">
+        
+        </a>
+    </li>           
+        <li>
+    <a href="#">
+        <img src="slider2.png">
+        
+        </a>
+    </li>           
+    <li>
+    <a href="#">
+        <img src="slider3.png">
+        
+        </a>
+    </li>           
+        <li>
+    <a href="#">
+        <img src="slider4.png">
+        
+        </a>
+    </li>           
+        <li>
+    <a href="#">
+        <img src="slider5.png">
+        
+        </a>
+    </li>           
+        <li>
+    <a href="#">
+        <img src="slider6.png">
+        
+        </a>
+    </li>           
+        <li>
+    <a href="#">
+        <img src="slider7.png">
+        
+        </a>
+    </li>           
+        <li>
+    <a href="#">
+        <img src="slider8.png">
+        
+        </a>
+    </li>           
+        <li>
+    <a href="#">
+        <img src="slider9.png">
+        
+        </a>
+    </li>           
+<li>
+    <a href="#">
+        <img src="sliderX.png">
+        
+        </a>
+    </li>           
+        
+
+    
+    </ul>
+   </div>    
+        
+    
+    
+        </div>
+        
+         </div>
+         </body>
+         
+         
+         </html>
